@@ -1,0 +1,6 @@
+[flake8]
+
+# ignore venv artifacts
+
+exclude = 
+    .venv/
