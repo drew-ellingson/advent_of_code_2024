@@ -1,2 +1,6 @@
 # venv artifacts
 .venv/
+
+
+# caches
+.mypy_cache/
