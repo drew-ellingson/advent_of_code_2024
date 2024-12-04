@@ -62,6 +62,5 @@ with open("day_04/input.txt") as f:
 
 ws = WordSearch(grid)
 
-print(ws.word_count("XMAS"))
-
-print(ws.x_mas_count())
+print(f'P1 Soln is {ws.word_count("XMAS")}')
+print(f"P2 Soln is: {ws.x_mas_count()}")
