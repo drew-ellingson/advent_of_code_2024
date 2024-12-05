@@ -16,12 +16,10 @@ class Pages:
         while not all(self.observes_rule(*r) for r in ruleset):
             for r in ruleset:
                 if not self.observes_rule(*r):
-                    first_idx, second_idx = self.pages.index(r[0]), self.pages.index(
-                        r[1]
-                    )
-                    self.pages[first_idx], self.pages[second_idx] = (
-                        self.pages[second_idx],
-                        self.pages[first_idx],
+                    i1, i2 = self.pages.index(r[0]), self.pages.index(r[1])
+                    self.pages[i1], self.pages[i2] = (
+                        self.pages[i2],
+                        self.pages[i1],
                     )
         return self.pages
 
