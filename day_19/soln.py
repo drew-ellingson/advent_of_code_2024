@@ -11,7 +11,7 @@ def count_ways_one(available: Tuple[str], pattern: str) -> bool:
         return sum(count_ways_one(available, c) for c in cands)
 
 
-def count_ways_all(available: Tuple[str], patterns: Tuple[str], p2: bool = False):
+def count_ways_all(available: Tuple[str], patterns: Tuple[str], p2: bool = False) -> int:
     counts = [count_ways_one(available, p) for p in patterns]
     return len([c for c in counts if c > 0]) if not p2 else sum(counts)
 
